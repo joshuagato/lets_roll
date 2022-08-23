@@ -7,32 +7,31 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
+<main>
+	<header>
+		<p>header</p>
+	</header>
 
-		to your new<br />SvelteKit app
-	</h1>
+	<section>
+		<p>filters</p>
+	</section>
+	<section>
+		<p>profiles</p>
+	</section>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	<footer>
+		<p>footer</p>
+	</footer>
+</main>
 
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
+<style lang="scss">
+	main {
+		display: grid;
+		grid-template-areas:
+		"header"
+		"filters"
+		"profiles"
+		"footer";
 	}
 
 	h1 {
