@@ -10,17 +10,18 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<main class="w-full">
-	<header class="w-full p-2 flex flex-row">
+<main class="">
+	<header class="flex flex-row">
 		<article class="w-full my-3 flex flex-row justify-between items-center">
-			<span class="">
-				<span class="p-2 w-4 h-4 rounded-full bg-current">N/A</span>
-				<span class="font-bold text-2xl">Let's Roll</span>
+			<span class="flex items-center">
+				<span class="block p-2 h-11 w-11 rounded-full bg-pink-600
+				text-gray-50 text-center mx-auto font-bold mx-1">N/A</span>
+				<span class="font-bold text-2xl mx-1">Let's Roll</span>
 			</span>
 
 			<span class="flex text-gray-500">
-				<span class="mx-2"><Fa icon={faSearch} /></span>
-				<span class="mx-2"><Fa icon={faEllipsisVertical} /></span>
+				<span class="mx-3"><Fa size="xl" icon={faSearch} /></span>
+				<span class="mx-3"><Fa icon={faEllipsisVertical} /></span>
 			</span>
 		</article>
 	</header>
