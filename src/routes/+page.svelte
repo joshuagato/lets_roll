@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
 	import Fa from 'svelte-fa';
-	import { faSearch, faEllipsisVertical, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+	import { faSearch, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 	const data = [
 		{ id: 1, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_1.jpg', description: 'This is the first phrase or clause of my chat.' },
 		{ id: 2, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_2.jpeg', description: 'This is the first phrase or clause of my chat.' },
@@ -58,7 +58,10 @@
 							{date}
 						</span>
 								<span class="text-gray-400 mx-2">
-							<Fa icon={faChevronRight} />
+							<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+								<path d="M0 0h24v24H0z" fill="none"/>
+								<path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+							</svg>
 						</span>
 							</div>
 						</div>
