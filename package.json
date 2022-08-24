@@ -38,9 +38,6 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
-		"@fortawesome/free-brands-svg-icons": "^6.1.2",
-		"@fortawesome/free-solid-svg-icons": "^6.1.2",
-		"cookie": "^0.4.1",
-		"svelte-fa": "^3.0.3"
+		"cookie": "^0.4.1"
 	}
 }
