@@ -1,8 +1,15 @@
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
 	import Fa from 'svelte-fa';
-	import { faSearch, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
-
+	import { faSearch, faEllipsisVertical, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+	const data = [
+		{ id: 1, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_1.jpg', description: 'This is the first phrase or clause of my chat.' },
+		{ id: 2, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_2.jpeg', description: 'This is the first phrase or clause of my chat.' },
+		{ id: 3, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_3.jpg', description: 'This is the first phrase or clause of my chat.' },
+		{ id: 1, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_1.jpg', description: 'This is the first phrase or clause of my chat.' },
+		{ id: 2, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_2.jpeg', description: 'This is the first phrase or clause of my chat.' },
+		{ id: 3, name: 'Irma Flores', date: '16/12/2019', picture: 'profile_3.jpg', description: 'This is the first phrase or clause of my chat.' }
+	];
 </script>
 
 <svelte:head>
@@ -10,7 +17,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<main class="">
+<main>
 	<header class="flex flex-row">
 		<article class="w-full my-3 flex flex-row justify-between items-center">
 			<span class="flex items-center">
@@ -27,10 +34,42 @@
 	</header>
 
 	<section class="w-full">
-		<p>filters</p>
+		<ul class="flex justify-between items-center text-xs font-bold">
+			<li class="text-orange-500">FRIENDS</li>
+			<li class="text-blue-400">TO SELLERS</li>
+			<li class="text-blue-400">MY CUSTOMERS</li>
+			<li class="text-blue-400">DELIVERY</li>
+		</ul>
 	</section>
-	<section class="w-full">
-		<p>profiles</p>
+	<section class="w-full my-4">
+		{#if data && data.length > 0}
+			{#each data as {id, name, date, picture, description}}
+				<article class="flex items-center content-between pl-0 ml-0 my-3">
+					<aside class="w-1/5 ">
+						<img class="rounded-full h-16 w-16" src="{picture}" alt="">
+					</aside>
+					<div class="w-4/5 flex flex-col pl-2">
+						<div class="flex justify-between items-center">
+					<span class="font-bold">
+						{name}
+					</span>
+							<div class="flex items-center">
+						<span class="text-gray-400 mx-2">
+							{date}
+						</span>
+								<span class="text-gray-400 mx-2">
+							<Fa icon={faChevronRight} />
+						</span>
+							</div>
+						</div>
+						<div class="text-gray-400 text-sm">
+							{description}
+						</div>
+					</div>
+				</article>
+				<hr class="border-gray-400 border-t-1 my-2" />
+			{/each}
+		{/if}
 	</section>
 
 	<footer class="w-full">
@@ -54,7 +93,7 @@
 	//	width: 100%;
 	//	height: 0;
 	//	padding: 0 0 calc(100% * 495 / 2048) 0;
-	//}
+	//}/
 	//
 	//.welcome img {
 	//	position: absolute;
